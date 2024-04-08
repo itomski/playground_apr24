@@ -28,13 +28,16 @@ public class Main {
         // Greeter.greet3("Peter", 22, 25); // Kompilerfehler - Keine passende Methode grfunden
         Greeter.greet3("Peter", 22);
 
-        int erg = Greeter.add(10, 25);
+        int erg = Greeter.add(10, 25); // Methode wird direkt auf der
         System.out.println("Die Summe von a und b ist " + erg);
 
         // Variable wird neu zugewiesen
-        erg = Greeter.div(10, 0); // Laufzeitproblem, division durch 0 nicht erlaubt
+        //erg = Greeter.div(10, 0); // Laufzeitproblem, division durch 0 nicht erlaubt
+        erg = Greeter.div(10, 5);
 
         System.out.println("Erg: " + erg);
+
+        System.out.println(Greeter.genRandNum()); // Das Erg der Methode wird ausgegeben
 
     } // Ende der main-Methode = Ende des Programms
 }

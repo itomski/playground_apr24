@@ -23,6 +23,12 @@ package de.lubowiecki;
 // Packages gruppieren den SourceCode
 // enthalten nur kleinbuchstaben und .
 
+// de.lubowiecki.Greeter
+// de.lubowiecki.sub.Greeter
+
+
+import java.util.Random;
+
 public class Greeter { // Klasse
 
 // Kann nicht ausgeführt werden, da keine main-Methode vorhanden
@@ -42,6 +48,12 @@ public class Greeter { // Klasse
     public static void greet3(String name, int age) { // Methode mit zwei Parametern
         System.out.printf("Das ist %s \n", name); // %s für String
         System.out.printf("%d Jahre alt \n", age); // %d für Ganzzahlen
+
+        // printf(Vorlage, Werte)
+        // printf("Hallo %s", "Peter") // Hallo Peter
+        // printf("Das ist %s %s", "Peter", "Pan") // Das ist Peter Pan
+        // printf("Das ist %s %s", "Peter", "Parker") // Das ist Peter Parker
+
     }
 
     public static int add(int a, int b) { // Methode gibt eine Ganzzahl zurück
@@ -51,5 +63,15 @@ public class Greeter { // Klasse
 
     public static int div(int a, int b) {
         return a / b;
+    }
+
+    // Klasse ist der Bauplan für Objekte
+    // Mansche Informationen stehen bereits im Bauplan und können dort geändert werden
+    // Mansche Informationen stehen erst zur Verfügung wenn ein konkretes Haus gabeut ist
+
+    public static int genRandNum() { // Klassenmethode - Kann direkt auf der Klasse ausgeführt werden
+        Random randGenerator = new Random(); // braucht ein import
+        //java.util.Random randGenerator = new java.util.Random(); // ohne import verwendbar
+        return randGenerator.nextInt(100);
     }
 }
