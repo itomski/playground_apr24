@@ -21,6 +21,10 @@ public class RechnerTest {
 
         System.out.println("Erg: " + Rechner.div(10, 15));
 
+        System.out.println();
+
+        System.out.println(Rechner.getProtokoll());
+
         // Standard in Java
         // Ganzzahlen: int
         // Fließkommazahlen: double
