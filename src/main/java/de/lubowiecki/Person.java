@@ -18,6 +18,7 @@ public class Person {
         return vorname + " " + nachname;
     }
 
+    /*
     @Override
     public String toString() {
         return "Person{" +
@@ -25,5 +26,16 @@ public class Person {
                 ", nachname='" + nachname + '\'' +
                 ", alter=" + alter +
                 '}';
+    }
+    */
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Person{");
+        sb.append("vorname='").append(vorname).append('\'');
+        sb.append(", nachname='").append(nachname).append('\'');
+        sb.append(", alter=").append(alter);
+        sb.append('}');
+        return sb.toString();
     }
 }
